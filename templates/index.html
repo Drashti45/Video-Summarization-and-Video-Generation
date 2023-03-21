@@ -1,0 +1,871 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Video Summarizer + Generator</title>
+{% endblock %}
+
+{% block body %}
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero d-flex align-items-center">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 d-flex flex-column justify-content-center">
+        <h1 data-aos="fade-up">Video Summarization with Video Regeneration </h1>
+        <h2 data-aos="fade-up" data-aos-delay="400">Summarizer Video and Article with Regenerate video</h2>
+        <div data-aos="fade-up" data-aos-delay="600">
+          <div class="text-center text-lg-start">
+            <a href="/video_sum"
+              class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+              <span>Get Started</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+        <img src="{{ url_for('static', filename = 'img/hero-img.png') }}" class="img-fluid" alt="">
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ======= Values Section ======= -->
+<section id="values" class="values">
+
+  <div class="container" data-aos="fade-up">
+
+    <header class="section-header">
+      <!-- <h2>Our Values</h2> -->
+      <p>Our Values</p>
+    </header>
+
+    <div class="row">
+
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="box">
+          <img src="{{ url_for('static',filename = 'img/values-1.png') }}" class="img-fluid" alt="">
+          <h3>Retain Knowledge</h3>
+          <p>Artificial Intelligencce will summarize your video and article</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="400">
+        <div class="box">
+          <img src="{{ url_for('static',filename = 'img/values-2.png') }}" class="img-fluid" alt="">
+          <h3>Enhance Productivity</h3>
+          <p> You just have to read summary or generate video with different options available </p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="600">
+        <div class="box">
+          <img src="{{ url_for('static',filename = 'img/values-3.png') }}" class="img-fluid" alt="">
+          <h3>Save time</h3>
+          <p> You don't need to watch large videos or read big articles </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- End Values Section -->
+
+<!-- ======= Features Section ======= -->
+<section id="features" class="features">
+
+  <div class="container" data-aos="fade-up">
+
+    <header class="section-header">
+      <!-- <h2>Features</h2> -->
+      <p>Features of VidSumGen</p>
+    </header>
+
+    <div class="row">
+
+      <div class="col-lg-6">
+        <img src="{{ url_for('static',filename = 'img/features.png') }}" class="img-fluid" alt="">
+      </div>
+
+      <div class="col-lg-6 mt-5 mt-lg-0 d-flex">
+        <div class="row align-self-center gy-4">
+
+          <div class="col-md-6" data-aos="zoom-out" data-aos-delay="200">
+            <div class="feature-box d-flex align-items-center">
+              <i class="bi bi-check"></i>
+              <h3>Video Summarization</h3>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="zoom-out" data-aos-delay="300">
+            <div class="feature-box d-flex align-items-center">
+              <i class="bi bi-check"></i>
+              <h3>Audio Generation</h3>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="zoom-out" data-aos-delay="400">
+            <div class="feature-box d-flex align-items-center">
+              <i class="bi bi-check"></i>
+              <h3>Regenerate the Video</h3>
+            </div>
+          </div>
+
+
+          <div class="col-md-6" data-aos="zoom-out" data-aos-delay="600">
+            <div class="feature-box d-flex align-items-center">
+              <i class="bi bi-check"></i>
+              <h3>Object and Event based Video Summarization</h3>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
+            <div class="feature-box d-flex align-items-center">
+              <i class="bi bi-check"></i>
+              <h3>Image Generation</h3>
+            </div>
+          </div>
+
+          <div class="col-md-6" data-aos="zoom-out" data-aos-delay="700">
+            <div class="feature-box d-flex align-items-center">
+              <i class="bi bi-check"></i>
+              <h3>Talking face</h3>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div> <!-- / row -->
+
+    <!-- Feature Tabs -->
+
+
+    <!-- Feature Icons -->
+
+</section><!-- End Features Section -->
+
+<!-- ======= Services Section ======= -->
+<section id="services" class="services">
+
+  <div class="container" data-aos="fade-up">
+
+    <header class="section-header">
+      <h2>Services</h2>
+      <p>Services Provided by VidSumGen</p>
+    </header>
+
+    <div class="row gy-4">
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-box blue">
+          <i class="ri-discuss-line icon"></i>
+          <h3>Video and Article Summarization</h3>
+          <p>You can read summaries of the video and the article. You don't need to read lengthy papers or watch lengthy
+            videos. </p>
+          <a href="/video_sum" class="read-more"><span>Try it</span> <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="service-box orange">
+          <i class="ri-discuss-line icon"></i>
+          <h3>Re-Generate the video</h3>
+          <p>There are numerous ways to regenerate the video, including using random videos, random images,
+            straightforward audio, and talking faces. </p>
+          <a href="/random_videos" class="read-more"><span>Try it</span> <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="service-box green">
+          <i class="ri-discuss-line icon"></i>
+          <h3>Image Generation</h3>
+          <p>By simply giving a prompt, you can generate an Image. </p>
+          <a href="/image_generation" class="read-more"><span>Try it</span> <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+        <div class="service-box red">
+          <i class="ri-discuss-line icon"></i>
+          <h3>Action Recognition</h3>
+          <p> You might try to identify the actions that are being performed in the attached video if it is audio-free.
+            The top five activities are displayed. </p>
+          <a href="/action_recognition" class="read-more"><span>Try it</span> <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+        <div class="service-box purple">
+          <i class="ri-discuss-line icon"></i>
+          <h3>Talking Faces</h3>
+          <p>You may get a talking-head video with generated audio by simply uploading an image.</p>
+          <a href="/talking_face" class="read-more"><span>Try it</span> <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="700">
+        <div class="service-box pink">
+          <i class="ri-discuss-line icon"></i>
+          <h3>Shorten the video</h3>
+          <p>Using the object-based and event-based methods, you may sum up the video. </p>
+          <a href="/shorten_video" class="read-more"><span>Try it</span> <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- End Services Section -->
+
+<!-- ======= Pricing Section ======= -->
+
+<!-- ======= F.A.Q Section ======= -->
+<section id="faq" class="faq">
+
+  <div class="container" data-aos="fade-up">
+
+    <header class="section-header">
+      <h2>F.A.Q</h2>
+      <p>Frequently Asked Questions</p>
+    </header>
+
+    <div class="row">
+      <div class="col-lg-6">
+        <!-- F.A.Q List 1-->
+        <div class="accordion accordion-flush" id="faqlist1">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faq-content-1">
+                Non consectetur a erat nam at lectus urna duis?
+              </button>
+            </h2>
+            <div id="faq-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+              <div class="accordion-body">
+                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur
+                gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faq-content-2">
+                Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque?
+              </button>
+            </h2>
+            <div id="faq-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+              <div class="accordion-body">
+                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
+                donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
+                ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faq-content-3">
+                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi?
+              </button>
+            </h2>
+            <div id="faq-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist1">
+              <div class="accordion-body">
+                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum
+                integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt.
+                Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+
+        <!-- F.A.Q List 2-->
+        <div class="accordion accordion-flush" id="faqlist2">
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faq2-content-1">
+                Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla?
+              </button>
+            </h2>
+            <div id="faq2-content-1" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+              <div class="accordion-body">
+                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
+                donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
+                ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faq2-content-2">
+                Tempus quam pellentesque nec nam aliquam sem et tortor consequat?
+              </button>
+            </h2>
+            <div id="faq2-content-2" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+              <div class="accordion-body">
+                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc
+                vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus
+                gravida quis blandit turpis cursus in
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faq2-content-3">
+                Varius vel pharetra vel turpis nunc eget lorem dolor?
+              </button>
+            </h2>
+            <div id="faq2-content-3" class="accordion-collapse collapse" data-bs-parent="#faqlist2">
+              <div class="accordion-body">
+                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada
+                nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis
+                tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas
+                fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- End F.A.Q Section -->
+
+<!-- ======= Portfolio Section ======= -->
+<section id="portfolio" class="portfolio">
+
+  <div class="container" data-aos="fade-up">
+
+    <header class="section-header">
+      <h2>Image Generation</h2>
+      <p>Images Generated by VidSumGen</p>
+    </header>
+
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-12 d-flex justify-content-center">
+        <ul id="portfolio-flters">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-app">Creatures</li>
+          <li data-filter=".filter-card">Scenery</li>
+          <li data-filter=".filter-web">Buildings</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+        <div class="portfolio-wrap">
+          <img src="{{ url_for('static',filename = 'img/images_generated/1.jpg') }}" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <!-- tower -->
+            <h4>Eiffel Tower</h4>
+            <div class="portfolio-links">
+              <a href="{{ url_for('static',filename = 'img/images_generated/1.jpg') }}" data-gallery="portfolioGallery"
+                class="portfokio-lightbox" title="Section1 1"><i class="bi bi-plus"></i></a>
+              <a id="copy-button1" title="Copy Prompt"><i class="bi bi-clipboard-check"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap">
+          <img src="{{ url_for('static',filename = 'img/images_generated/2.jpg') }}" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <!-- human -->
+            <h4>Astronaut</h4>
+            <div class="portfolio-links">
+              <a href="{{ url_for('static',filename = 'img/images_generated/2.jpg') }}" data-gallery="portfolioGallery"
+                class="portfokio-lightbox" title="Section3 1"><i class="bi bi-plus"></i></a>
+              <a id="copy-button2" title="Copy Prompt"><i class="bi bi-clipboard-check"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+        <div class="portfolio-wrap">
+          <img src="{{ url_for('static',filename = 'img/images_generated/14.jpg')}}" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <!-- mush -->
+            <h4>Mushrooms</h4>
+            <div class="portfolio-links">
+              <a href="{{ url_for('static',filename = 'img/images_generated/14.jpg') }}" data-gallery="portfolioGallery"
+                class="portfokio-lightbox" title="Section1 2"><i class="bi bi-plus"></i></a>
+              <a id="copy-button14" title="Copy Prompt"><i class="bi bi-clipboard-check"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap">
+          <img src="{{ url_for('static',filename = 'img/images_generated/4.jpg') }}" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <!-- unicorns -->
+            <h4>Unicorns</h4>
+            <div class="portfolio-links">
+              <a href="{{ url_for('static',filename = 'img/images_generated/4.jpg') }}" data-gallery="portfolioGallery"
+                class="portfokio-lightbox" title="Section2 1"><i class="bi bi-plus"></i></a>
+              <a id="copy-button4" title="Copy Prompt"><i class="bi bi-clipboard-check"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="portfolio-wrap">
+          <img src="{{ url_for('static',filename = 'img/images_generated/5.jpg') }}" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <!-- city -->
+            <h4>Futuristic City</h4>
+            <div class="portfolio-links">
+              <a href="{{ url_for('static',filename = 'img/images_generated/5.jpg') }}" data-gallery="portfolioGallery"
+                class="portfokio-lightbox" title="Section3 2"><i class="bi bi-plus"></i></a>
+              <a id="copy-button5" title="Copy Prompt"><i class="bi bi-clipboard-check"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+        <div class="portfolio-wrap">
+          <img src="{{ url_for('static',filename = 'img/images_generated/6.jpg') }}" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <!-- river -->
+            <h4>River</h4>
+            <div class="portfolio-links">
+              <a href="{{ url_for('static',filename = 'img/images_generated/6.jpg') }}" data-gallery="portfolioGallery"
+                class="portfokio-lightbox" title="Section1 3"><i class="bi bi-plus"></i></a>
+              <a id="copy-button6" title="Copy Prompt"><i class="bi bi-clipboard-check"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="portfolio-wrap">
+          <img src="{{ url_for('static',filename = 'img/images_generated/7.jpg') }}" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <!-- palace -->
+            <h4>Palace</h4>
+            <div class="portfolio-links">
+              <a href="{{ url_for('static',filename = 'img/images_generated/7.jpg') }}" data-gallery="portfolioGallery"
+                class="portfokio-lightbox" title="Section2 2"><i class="bi bi-plus"></i></a>
+              <a id="copy-button7" title="Copy Prompt"><i class="bi bi-clipboard-check"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap">
+          <img src="{{ url_for('static',filename = 'img/images_generated/8.jpg') }}" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <h4>Ethereal autumn leaves goddess</h4>
+            <div class="portfolio-links">
+              <a href="{{ url_for('static',filename = 'img/images_generated/8.jpg') }}" data-gallery="portfolioGallery"
+                class="portfokio-lightbox" title="Section2 3"><i class="bi bi-plus"></i></a>
+              <a id="copy-button8" title="Copy Prompt"><i class="bi bi-clipboard-check"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="portfolio-wrap">
+          <img src="{{ url_for('static',filename = 'img/images_generated/9.jpg') }}" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <!-- houses A medieval village in switzerland, ornate, beautiful, atmosphere, vibe, flowers, concept art illustration, greg rutowski, volumetric lighting, sunbeams, particles-->
+            <h4>A medieval village</h4>
+            <div class="portfolio-links">
+              <a href="{{ url_for('static',filename = 'img/images_generated/9.jpg') }}" data-gallery="portfolioGallery"
+                class="portfokio-lightbox" title="Section3 3"><i class="bi bi-plus"></i></a>
+              <a id="copy-button9" title="Copy Prompt"><i class="bi bi-clipboard-check"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+        <div class="portfolio-wrap">
+          <img src="{{ url_for('static',filename = 'img/images_generated/10.jpg') }}" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <!-- forest -->
+            <h4>Forest</h4>
+            <div class="portfolio-links">
+              <a href="{{ url_for('static',filename = 'img/images_generated/10.jpg') }}" data-gallery="portfolioGallery"
+                class="portfokio-lightbox" title="Section2 4"><i class="bi bi-plus"></i></a>
+              <a id="copy-button10" title="Copy Prompt"><i class="bi bi-clipboard-check"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="portfolio-wrap">
+          <img src="{{ url_for('static',filename = 'img/images_generated/11.jpg') }}" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <!-- portal -->
+            <h4>Portal</h4>
+            <div class="portfolio-links">
+              <a href="{{ url_for('static',filename = 'img/images_generated/11.jpg') }}" data-gallery="portfolioGallery"
+                class="portfokio-lightbox" title="Section1 4"><i class="bi bi-plus"></i></a>
+              <a id="copy-button11" title="Copy Prompt"><i class="bi bi-clipboard-check"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+        <div class="portfolio-wrap">
+          <img src="{{ url_for('static',filename = 'img/images_generated/12.jpg') }}" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <!-- horror house  A scary house in jungle, dark, detailed, cinematic, oil painting style, HD, 16K-->
+            <h4>Scary house</h4>
+            <div class="portfolio-links">
+              <a href="{{ url_for('static',filename = 'img/images_generated/12.jpg') }}" data-gallery="portfolioGallery"
+                class="portfokio-lightbox" title="Section3 4"><i class="bi bi-plus"></i></a>
+              <a id="copy-button12" title="Copy Prompt"><i class="bi bi-clipboard-check"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+        <div class="portfolio-wrap">
+          <img src="{{ url_for('static',filename = 'img/images_generated/13.jpg') }}" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <!-- sunken ship -->
+            <h4>Sunken Ship</h4>
+            <div class="portfolio-links">
+              <a href="{{ url_for('static',filename = 'img/images_generated/13.jpg') }}" data-gallery="portfolioGallery"
+                class="portfokio-lightbox" title="Section1 5"><i class="bi bi-plus"></i></a>
+              <a id="copy-button13" title="Copy Prompt"><i class="bi bi-clipboard-check"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="portfolio-wrap">
+          <img src="{{ url_for('static',filename = 'img/images_generated/3.jpg') }}" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <!--cat Kneeling cat knight, portrait, finely detailed armor, intricate design, silver, silk, cinematic lighting, 4k-->
+            <h4>Cat</h4>
+            <div class="portfolio-links">
+              <a href="{{ url_for('static',filename = 'img/images_generated/3.jpg') }}" data-gallery="portfolioGallery"
+                class="portfokio-lightbox" title="Section2 5"><i class="bi bi-plus"></i></a>
+              <a id="copy-button3" title="Copy Prompt"><i class="bi bi-clipboard-check"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+        <div class="portfolio-wrap">
+          <img src="{{ url_for('static',filename = 'img/images_generated/15.jpg') }}" class="img-fluid" alt="">
+          <div class="portfolio-info">
+            <!-- island -->
+            <h4>Island</h4>
+            <div class="portfolio-links">
+              <a href="{{ url_for('static',filename = 'img/images_generated/15.jpg') }}" data-gallery="portfolioGallery"
+                class="portfokio-lightbox" title="Section3 5"><i class="bi bi-plus"></i></a>
+              <a id="copy-button15" title="Copy Prompt"><i class="bi bi-clipboard-check"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section><!-- End Portfolio Section -->
+
+
+<!-- ======= Prompts Section ======= -->
+<section id="testimonials" class="testimonials">
+
+  <div class="container" data-aos="fade-up">
+
+    <header class="section-header">
+      <h2>Prompts</h2>
+      <p>Different Prompts for you to try</p>
+    </header>
+
+    <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              A hidden temple deep in a jungle, with intricate carvings and treasures inside.
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              A group of adventurers exploring a lost temple in a desert.
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              A secret underground laboratory with high-tech equipment and scientists.
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              A fantasy world with floating islands and giant crystals.
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              A group of travelers riding giant birds through a mountain pass.
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              A post-apocalyptic city with a massive tree growing in the center, providing the only source of life.
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              A city built on the back of a giant sea creature, with its tentacles wrapping around the buildings.
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              A futuristic metropolis in a desert with tall, glass buildings and artificial lakes.
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              A mythical creature, part dragon and part unicorn, with a rainbow-colored mane and wings.
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              A magical garden with talking flowers and a fountain that grants wishes.
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              A time machine that looks like a vintage car, with its doors open, revealing a portal to the past.
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="testimonial-item">
+            <p>
+              A futuristic hovercraft on a mission to explore a planet with unknown dangers.
+            </p>
+          </div>
+        </div><!-- End testimonial item -->
+
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+
+</section><!-- End Testimonials Section -->
+
+<!-- ======= Recent Blog Posts Section ======= -->
+<section id="recent-blog-posts" class="recent-blog-posts">
+
+  <div class="container" data-aos="fade-up">
+
+    <header class="section-header">
+      <h2>Blog</h2>
+      <p>Recent posts form our Blog</p>
+    </header>
+
+    <div class="row">
+
+      <div class="col-lg-4">
+        <div class="post-box">
+          <div class="post-img"><img src="{{ url_for('static',filename = 'img/blog/blog-1.jpg') }}" class="img-fluid"
+              alt=""></div>
+          <span class="post-date">Tue, September 15</span>
+          <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit</h3>
+          <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
+              class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="post-box">
+          <div class="post-img"><img src="{{ url_for('static',filename = 'img/blog/blog-2.jpg') }}" class="img-fluid"
+              alt=""></div>
+          <span class="post-date">Fri, August 28</span>
+          <h3 class="post-title">Et repellendus molestiae qui est sed omnis voluptates magnam</h3>
+          <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
+              class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="post-box">
+          <div class="post-img"><img src="{{ url_for('static',filename = 'img/blog/blog-3.jpg') }}" class="img-fluid"
+              alt=""></div>
+          <span class="post-date">Mon, July 11</span>
+          <h3 class="post-title">Quia assumenda est et veritatis aut quae</h3>
+          <a href="blog-single.html" class="readmore stretched-link mt-auto"><span>Read More</span><i
+              class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- End Recent Blog Posts Section -->
+
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+
+  <div class="container" data-aos="fade-up">
+
+    <header class="section-header">
+      <h2>Contact</h2>
+      <p>Contact Us</p>
+    </header>
+
+    <div class="row gy-4">
+
+      <div class="col-lg-6">
+
+        <div class="row gy-4">
+          <div class="col-md-6">
+            <div class="info-box">
+              <i class="bi bi-geo-alt"></i>
+              <h3>Address</h3>
+              <p>A108 Adam Street,<br>New York, NY 535022</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-box">
+              <i class="bi bi-telephone"></i>
+              <h3>Call Us</h3>
+              <p>+1 5589 55488 55<br>+1 6678 254445 41</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-box">
+              <i class="bi bi-envelope"></i>
+              <h3>Email Us</h3>
+              <p>info@example.com<br>contact@example.com</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="info-box">
+              <i class="bi bi-clock"></i>
+              <h3>Open Hours</h3>
+              <p>Monday - Friday<br>9:00AM - 05:00PM</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-lg-6">
+        <form action="/" method="POST" class="email-form">
+          <div class="row gy-4">
+
+            <div class="col-md-6">
+              <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+            </div>
+
+            <div class="col-md-6 ">
+              <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="col-md-12">
+              <input type="text" class="form-control" name="subject" placeholder="Subject" required>
+            </div>
+
+            <div class="col-md-12">
+              <textarea class="form-control" name="msg" rows="6" placeholder="Message" required></textarea>
+            </div>
+
+            <!-- <div class="col-md-12 text-center">
+                 <button type="submit" class="btn btn-outline-primary">Submit</button>
+                </div> -->
+
+            <div class="col-md-12 text-center">
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your message has been sent. Thank you!</div>
+
+              <button type="submit">Send Message</button>
+            </div>
+
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- End Contact Section -->
+
+</main><!--End #main-->
+
+{% endblock %}

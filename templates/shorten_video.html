@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Action Summarization</title>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+  $(window).on('load', function () {
+    $(".loading").fadeOut("slow");
+  });  
+</script>
+{% endblock %}
+
+{% block body %}
+
+<div class="video-sum">
+  <form action="/shorten_video" method='POST' enctype='multipart/form-data'>
+    <div class="radio-option">
+      <div class="shorten-option">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="RadioOption" id="inlineRadio1"
+            onchange="this.form.submit()" value="Object based Video Summarization">
+          <label class="form-check-label" for="inlineRadio1">Object based Video Summarization</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="RadioOption" id="inlineRadio2"
+            onchange="this.form.submit()" value="Event based Video Summarization">
+          <label class="form-check-label" for="inlineRadio2">Event based Video Summarization</label>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-lg-12 text-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <div class="text-shorten">
+              <h2>Choose Your File</h2>
+              <p> Please choose your for Video Summarization </p>
+            </div>
+          </div>
+          <div class="shorten-url">
+            <div class="url-submit-shorten">
+              {{form1.hidden_tag()}}
+              {{form1.file()}}
+              {{form1.submit()}}
+            </div>
+          </div>
+          {{message_shorten}}
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="loading">
+  <div class="loading-css">
+    <div class="row justify-content-center"></div>
+    <iframe src="https://giphy.com/embed/3oEjI6SIIHBdRxXI40" width="250" height="250" frameBorder="0"
+      class="giphy-embed" allowFullScreen></iframe>
+  </div>
+</div>
+
+<div class="audio-download">
+  <iframe width="560" height="315" src="{{ url_for('static', filename='shorten_video.mp4') }}" frameborder="0"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<div class="download-option">
+  <div class="col-lg-12 text-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="download-shorten">
+          <h4>Download a file</h4>
+          <p>Click the link below to download the video:</p>
+          <a href="{{ url_for('download_file') }}">Download</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
